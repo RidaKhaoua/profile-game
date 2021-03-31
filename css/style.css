@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    --main-color:#eee;
+    --backcolor: white;
+}
+ hr {
+     margin-top: 15px;
+     margin-bottom: 15px;
+     opacity: 0.2;
+     background-color: #eee;
+ }
+.container {
+    width: 900px;
+    margin:  20px auto;
+    background-color: var(--main-color);
+    padding: 15px;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+    background-color: var(--backcolor);
+    /* padding: 18px; */
+}
+
+.profile .left-div {
+    border: 1px solid #eee;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile .left-div .avatar img{
+    border-radius: 50%;
+    border: 5px solid #eee;
+    width: 160px;
+    box-shadow: 0px 0px 4px #eee;
+}
+
+.profile .left-div .level {
+    /* border: 1px solid black; */
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.profile .left-div .progresse-bare {
+    width: 205px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    /* border: 1px solid; */
+}
+.profile .left-div .progresse-bare::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background-color: #009688;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.profile .left-div .points {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* border: 1px solid black; */
+    font-size: 13px;
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.681);
+    
+}
+
+.profile .left-div .points span {
+    color: #009688;
+    font-weight: bold;
+} 
+
+
+
+/* right div */
+.right-div {
+    /* border: 1px solid black; */
+    padding: 10px;
+    position: relative;
+}
+
+.right-div .title {
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.right-div .body {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.681);
+}
+
+.right-div .dyas {
+    position: absolute;
+    right: 11px;
+    bottom: 10px;
+    color: rgba(0, 0, 0, 0.681);
+
+}
+
+/* point-log */
+.point-log {
+    background-color: var(--backcolor);
+    padding: 10px;
+
+}
+
+.point-log .title, .trophies .title, .ladder-new .title, .your-powers .title {
+    background-color: #607d8b;
+    display: inline-block;
+    padding: 14px;
+    color: white;
+    text-transform: capitalize;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.point-log .style {
+    border: 1px solid #eee;
+    padding: 10px;
+    margin: 15px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.681);
+
+}
+
+.point-log .style .one {
+    color: #009688;
+    font-weight: bold;
+}
+
+.point-log .two {
+    border-bottom-color: transparent;
+}
+
+.point-log .coloring {
+    color: #e91e63;
+    font-weight: bold;
+}
+
+.trophies {
+    background-color: white;
+    padding: 20px;
+}
+
+.trophies .trophie-images .first, .second {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+   padding: 10px;
+}
+
+
+
+.trophies img {
+   border: 2px solid #fdd71c;
+    width:  65px;
+    position: relative;
+}
+
+
+.trophies .trophie-images .first .six, .first .teen, .second .one, .second .three, .second .five, .second .eight{
+    opacity: 0.2;
+}
+
+.ladder-new {
+    background-color: var(--backcolor);
+    padding: 10px;
+}
+
+.ladder-new .body {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.681);
+ 
+}
+
+.ladder-new .red {
+    color: #e91e63;
+    font-weight: bold;
+}
+
+.ladder-new .blue {
+    font-weight: bold;
+    color: #03a9f4;
+}
+
+.your-powers {
+    background-color: var(--backcolor);
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.your-powers p {
+    border-bottom:1px solid #eee ;
+    padding: 15px;
+    position: relative;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.681);
+
+}
+
+.your-powers p span {
+    position: absolute;
+    right: 0;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.your-powers p .green {
+    color: green;
+}
+
+.your-powers p .red {
+    color: red;
+}
+
+
+.your-powers p:last-child {
+    border: none;
+}
